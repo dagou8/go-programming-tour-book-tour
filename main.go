@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"github.com/dagou8/go-programming-tour-book-tour/cmd"
+	"log"
+)
 
 func main() {
-	fmt.Println("vim-go")
+	err := cmd.Execute()
+	if err != nil {
+		log.Fatalf("cmd.Execute err: $v", err)
+	}
 }
